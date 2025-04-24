@@ -1,54 +1,51 @@
-# React + TypeScript + Vite
+Calys Web
+Description
+Calys Web est la version web de l’application Calys dédiée aux calculs structuraux (poteaux, poutres, etc.). Le projet utilise React, TypeScript, et Vite pour un développement rapide et moderne, et inclut des règles ESLint pour maintenir un code de qualité.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Prérequis
+Avant de commencer, assurez-vous d'avoir les outils suivants installés sur votre machine :
 
-Currently, two official plugins are available:
+Node.js (version 16 ou plus)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+npm (inclus avec Node.js)
 
-## Expanding the ESLint configuration
+Installation
+Clonez le projet et installez les dépendances avec les commandes suivantes :
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+bash
+Copier
+git clone https://github.com/drob33/calys-web.git
+cd calys-web
+npm install
+Lancer l'application
+Pour démarrer l'application en mode développement, tapez la commande suivante :
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+bash
+Copier
+npm run dev
+Cela lancera le serveur local à http://localhost:5173.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Structure du projet
+Voici la structure de dossiers pour organiser le projet :
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+src/ : Dossier contenant les composants React et le code source.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+components/ : Composants React réutilisables.
+
+data/ : Données de configuration ou API (JSON, etc.).
+
+assets/ : Images, logos, icônes.
+
+utils/ : Fonctions utilitaires et helpers.
+
+Contribution
+Les contributions sont les bienvenues ! Si vous souhaitez améliorer ce projet, merci de suivre ces étapes :
+
+Fork le dépôt
+
+Créez une branche pour vos changements
+
+Soumettez une pull request
+
+Changelog
+Consultez le fichier CHANGELOG.md pour suivre les changements et les versions du projet.
